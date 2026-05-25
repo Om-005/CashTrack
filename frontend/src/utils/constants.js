@@ -64,4 +64,4 @@ export const COLORS = {
 };
 
 // ─── API Configuration ────────────────────────────────────────────────────────
-export const API_URL = 'http://localhost:5000/api';
+export const API_URL = 'https://cashtrack-ajjp.onrender.com/api';
