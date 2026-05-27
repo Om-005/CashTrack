@@ -5,14 +5,14 @@
 
 // ─── Expense Categories ───────────────────────────────────────────────────────
 export const CATEGORIES = [
-  { id: 'food',          name: 'Food & Dining',   emoji: '🍽️', color: '#FF6B6B' },
-  { id: 'transport',     name: 'Transport',       emoji: '🚗', color: '#4ECDC4' },
-  { id: 'shopping',      name: 'Shopping',        emoji: '🛍️', color: '#45B7D1' },
-  { id: 'entertainment', name: 'Entertainment',   emoji: '🎬', color: '#96CEB4' },
-  { id: 'health',        name: 'Health',          emoji: '💊', color: '#FFEAA7' },
-  { id: 'utilities',     name: 'Utilities',       emoji: '💡', color: '#DDA0DD' },
-  { id: 'education',     name: 'Education',       emoji: '📚', color: '#98D8C8' },
-  { id: 'other',         name: 'Other',           emoji: '📦', color: '#C4C4C4' },
+  { id: 'food',          name: 'Food & Dining',   emoji: '🍽️', color: '#e8c96a' },
+  { id: 'transport',     name: 'Transport',       emoji: '🚗', color: '#4ecdc4' },
+  { id: 'shopping',      name: 'Shopping',        emoji: '🛍️', color: '#5b8dee' },
+  { id: 'entertainment', name: 'Entertainment',   emoji: '🎬', color: '#9b6dff' },
+  { id: 'health',        name: 'Health',          emoji: '💊', color: '#f5a623' },
+  { id: 'utilities',     name: 'Utilities',       emoji: '💡', color: '#c9a84c' },
+  { id: 'education',     name: 'Education',       emoji: '📚', color: '#e05c5c' },
+  { id: 'other',         name: 'Other',           emoji: '📦', color: '#6b6f84' },
 ];
 
 // ─── Payment Methods ──────────────────────────────────────────────────────────

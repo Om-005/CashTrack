@@ -205,12 +205,24 @@ const AnalyticsScreen = () => {
   }
   const barData = { labels: MONTHS, datasets: [{ data: chartData }] };
 
-  const pieData = (categoryData?.analytics || []).map(cat => {
-    const found = CATEGORIES.find(c => c.name.toLowerCase() === (cat.name || cat._id || '').toLowerCase());
+  const FALLBACK_COLORS = [
+    '#e8c96a', '#4ecdc4', '#5b8dee', '#9b6dff',
+    '#f5a623', '#c9a84c', '#e05c5c', '#6b6f84',
+  ];
+
+  const pieData = (categoryData?.analytics || []).map((cat, idx) => {
+    // Backend projects the aggregated field as `category` (not `name` or `_id`)
+    const rawKey = (cat.category || cat.name || cat._id || '').toLowerCase().trim();
+    const found = CATEGORIES.find(c =>
+      c.id.toLowerCase() === rawKey ||
+      c.name.toLowerCase() === rawKey ||
+      c.name.toLowerCase().includes(rawKey) ||
+      rawKey.includes(c.id.toLowerCase())
+    );
     return {
-      name:            found?.name || cat.name || cat._id || 'Other',
+      name:            found?.name || cat.category || cat.name || cat._id || 'Other',
       amount:          cat.total || cat.amount || 0,
-      color:           found?.color || '#8d9099',
+      color:           found?.color || FALLBACK_COLORS[idx % FALLBACK_COLORS.length],
       legendFontColor: T.muted,
       legendFontSize:  11,
     };

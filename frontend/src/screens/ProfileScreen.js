@@ -227,7 +227,7 @@ const ProfileScreen = () => {
         </FadeSlot>
 
         <FadeSlot delay={480}>
-          <Text style={styles.version}>CashTrack v1.0.0</Text>
+          <Text style={styles.version}>CashTrack v1.0.1</Text>
         </FadeSlot>
 
         <View style={{ height: 40 }} />
